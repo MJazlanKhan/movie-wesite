@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://e0.pxfuel.com/wallpapers/659/790/desktop-wallpaper-avengers-endgame-scene-fight-scene.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.Header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    /* Adjust the height of the shadow as needed */
+    background: linear-gradient(to bottom, rgba(8, 11, 40, 0.768), rgba(0, 0, 0, 0));
+    pointer-events: none;
+}
+
+.Header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    /* Adjust the height of the shadow as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(8, 11, 40, 0.768));
+    pointer-events: none;
+}
+
+.Header::before {
+    top: 0;
+}
+
+.Header::after {
+    bottom: 0;
+}
+
+
+.headerWrapper {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+}
+
+.headerWrapper h1 {
+    font-size: 30px;
+    color: #fff
+}
+
+.headerWrapper h1 span {
+    color: #F2114E
+}
+
+.headerWrapper header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-top: 15px;
+    align-items: center;
+
+}
+
+.headerWrapper header .menu ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerWrapper header .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerWrapper header .menu ul li {
+    list-style: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.headerWrapper header .menu .icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.headerWrapper header .menu .icons * {
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 25px;
+    align-items: center;
+}
+
+.featuredinfo {
+    width: 550px;
+    padding-left: 70px;
+    color: #fff;
+    margin-top: 260px;
+    z-index: 1;
+}
+
+
+/* ----------------------------------------------------Movie List ----------------------------------------------------------------- */
+
+
+.MovielistWrapper {
+    background-color: #010511;
+    color: #fff;
+    padding: 25px 0;
+}
+
+.ant-tabs-tab-active {
+    color: #fff !important
+}
+
+.ant-tabs-nav {
+    width: 100% !important;
+}
+
+.ant-tabs-nav-list,
+.ant-tabs-nav-wrap,
+.ant-tabs-nav {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.ant-tabs-tab {
+    border-radius: 50px !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+#rc-tabs-0-tab-1 {
+    color: #fff !important;
+
+}
+
+.ant-tabs-tab-active {
+    background-color: #F2114E !important;
+    color: #fff !important;
+}
+
+.ant-tabs-nav::before {
+    border-bottom: none !important;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.ant-tabs-content-holder{
+    width: 100%;
+}
+.card {
+    width: 250px;
+    height: 380px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px 0;
+    display: flex;
+    transition: all ease 0.8s;
+}
+.card:hover{
+    scale: 1.1;
+}
+.ant-tabs,
+.ant-tabs-tab.ant-tabs-tab-active,
+.ant-tabs-tab-btn {
+    color: #fff !important
+}
+
+.ant-tabs-tab.ant-tabs-tab-active,
+#rc-tabs-0-tab-3,
+#rc-tabs-0-tab-2 {
+    color: #fff !important
+}
+
+.item:hover{
+    background-color: #b5bcd3;
+}
+
+.newpost form label{
+    color:#000 !important
+}
+.newpost form .ant-row{
+    justify-content: center !important;
+}
+.newpost .css-dev-only-do-not-override-gzal6t{
+    height: 100% !important;
+    /* min-height:100vh !important */
+}
+.newpost .ant-layout{
+    min-height:100vh !important
+}

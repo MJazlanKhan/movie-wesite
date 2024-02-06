@@ -1,0 +1,68 @@
+.signup,.signin{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/Supermanbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 750px;
+    height: 80%;
+    background-color: rgba(41, 41, 41, 0.713);
+    padding: 20px;
+    border-radius: 10px;
+}
+.form form{
+    padding: 40px 0px;
+}
+.form span{
+    color: #fff !important;
+}
+.ant-form{
+    max-width: 100% !important;
+}
+.ant-row {
+    justify-content: space-around !important;
+}
+.ant-form-item-label{
+    overflow: visible !important;
+}
+.ant-row{
+    justify-content: center ;
+}
+.form form{
+    display: flex;
+    gap: 80px;
+    width: 100% !important;
+    justify-content: center;
+}
+.ant-form-item-label label{
+    color:#fff !important;
+    padding-right: 10px !important; 
+    font-size: 14px !important;
+}
+.form form input{
+    background: none !important;
+    color:#fff;
+    width: 150px;
+}
+.form form input::placeholder{
+    color:#fff
+}
+.form button span{
+    color:#000 !important
+}
+.ant-picker {
+    background: none !important;
+    color:#fff !important
+
+}
+
+
+.editForm input::placeholder{
+    color:#000 !important
+}
