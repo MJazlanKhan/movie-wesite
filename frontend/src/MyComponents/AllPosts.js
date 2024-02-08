@@ -185,6 +185,15 @@ const AllPosts = () => {
                             rules={[{ required: true, message: 'Please input Movie Summary' }]}>
                             <Input />
                         </Form.Item>
+                        <Form.Item name="video"
+                            onChange={handleValues}
+                            style={{ color: "#000" }}
+                            label="video"
+                            initialValue={EditingPost.video}
+
+                            rules={[{ required: true, message: 'Please input Movie Link (Youtube)' }]}>
+                            <Input />
+                        </Form.Item>
                         <Form.Item name="image" label="Movie Image"
                             rules={[
                                 {

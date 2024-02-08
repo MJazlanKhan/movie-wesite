@@ -109,10 +109,10 @@ class Controller {
     }
 
     static createPost = async (req, res) => {
-        const { title, Summary, content, genre, image } = req.body;
+        const { title, Summary, content, genre, image, video } = req.body;
 
         try {
-            if (!title || !Summary || !content || !image || !genre) {
+            if (!title || !Summary || !content || !image || !genre || !video) {
                 return res.status(400).json({ message: "All fields are required" });
             }
 
@@ -121,7 +121,8 @@ class Controller {
                 Summary,
                 content,
                 image,
-                genre
+                genre,
+                video
             });
             const savedPost = await newPost.save();
 
@@ -197,7 +198,7 @@ class Controller {
 
         const { postId } = req.params;
 
-        const { title, Summary, content, genre, image } = req.body;
+        const { title, Summary, content, genre, image, video } = req.body;
         // console.log(req.body)
         try {
 
@@ -212,6 +213,7 @@ class Controller {
             post.content = content;
             post.genre = genre;
             post.image = image;
+            post.video = video;
 
             const updatedPost = await post.save();
 
