@@ -55,7 +55,7 @@ const Signup = () => {
     const handleSubmit = async () => {
         setLoading("SignupLoading")
         try {
-            const res = await axios.post("http://localhost:9000/api/user/signup", UserDetails)
+            const res = await axios.post("https://movie-website-server.onrender.com/api/user/signup", UserDetails)
             console.log(res)
             if (res.status === 200) {
                 message.success('User Account Created Successfully!');

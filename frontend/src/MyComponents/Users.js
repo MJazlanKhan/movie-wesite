@@ -9,7 +9,7 @@ const Users = () => {
 
     const loadUsers = async () => {
         try {
-            const res = await axios.get("http://localhost:9000/api/admin/allUsers")
+            const res = await axios.get("https://movie-website-server.onrender.com/api/admin/allUsers")
             setUserData(res.data)
         } catch (error) {
             console.log(error)
@@ -36,7 +36,7 @@ const Users = () => {
         const userId = record.key
 
         try {
-            const res = await axios.put(`http://localhost:9000/api/admin/user/disable/${userId}`)
+            const res = await axios.put(`https://movie-website-server.onrender.com/api/admin/user/disable/${userId}`)
             if (res.status === 200) {
                 message.success("User Has Been Disabled !!")
                 loadUsers()
@@ -50,7 +50,7 @@ const Users = () => {
         const userId = record.key
 
     try {
-        const res = await axios.put(`http://localhost:9000/api/admin/user/enable/${userId}`)
+        const res = await axios.put(`https://movie-website-server.onrender.com/api/admin/user/enable/${userId}`)
         if (res.status === 200) {
             message.success("User Has Been Disabled !!")
             loadUsers()

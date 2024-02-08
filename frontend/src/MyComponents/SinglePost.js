@@ -19,7 +19,7 @@ const SinglePost = () => {
 
     const loadPost = async () => {
         // console.log(postId)
-        const res = await axios.get(`http://localhost:9000/api/post/${postId}`)
+        const res = await axios.get(`https://movie-website-server.onrender.com/api/post/${postId}`)
         setPostData(res.data)
     }
     useEffect(() => {
@@ -31,7 +31,7 @@ const SinglePost = () => {
     const RemoveWishlist = async () => {
         setLoading("wishlistLoad")
         try {
-            const res = await axios.delete(`http://localhost:9000/api/users/wishlist/remove/${userId}/${postId}`);
+            const res = await axios.delete(`https://movie-website-server.onrender.com/api/users/wishlist/remove/${userId}/${postId}`);
 
             console.log(res)
             message.success("Post Delete From Wishlist")
@@ -49,7 +49,7 @@ const SinglePost = () => {
     const handleWishlist = async () => {
         setLoading("wishlistLoad")
         try {
-            const res = await axios.put("http://localhost:9000/api/users/wishlist/add", {
+            const res = await axios.put("https://movie-website-server.onrender.com/api/users/wishlist/add", {
                 postId: postId,
                 userId: userId
             })
@@ -67,7 +67,7 @@ const SinglePost = () => {
     const checkWishlist = async () => {
 
         try {
-            const res = await axios.get(`http://localhost:9000/api/users/wishlist/${userId}`)
+            const res = await axios.get(`https://movie-website-server.onrender.com/api/users/wishlist/${userId}`)
 
             console.log(res.data)
             setWishlistItems(res.data)

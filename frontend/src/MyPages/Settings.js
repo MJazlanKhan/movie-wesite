@@ -18,7 +18,7 @@ const Settings = () => {
     const loadUser = async () => {
 
         try {
-            const res = await axios.get(`http://localhost:9000/api/user/${userId}`)
+            const res = await axios.get(`https://movie-website-server.onrender.com/api/user/${userId}`)
             console.log(res)
             setUser(res.data)
             console.log(User)
@@ -72,7 +72,7 @@ const Settings = () => {
     const setPic = async () => {
         const userId = User._id
         try {
-            const res = await axios.put(`http://localhost:9000/api/user/profile/${userId}`, { UploadedImg })
+            const res = await axios.put(`https://movie-website-server.onrender.com/api/user/profile/${userId}`, { UploadedImg })
             // console.log(res)
             setUser(res.data)
             setUploadedImg(null)
@@ -89,7 +89,7 @@ const Settings = () => {
     const handleSubmit = async () => {
         console.log(User)
         try {
-            const res = await axios.put(`http://localhost:9000/api/user/profileDetails/${userId}`, User)
+            const res = await axios.put(`https://movie-website-server.onrender.com/api/user/profileDetails/${userId}`, User)
             console.log(res)
             setUser(res.data)
             localStorage.setItem("username", User.username)

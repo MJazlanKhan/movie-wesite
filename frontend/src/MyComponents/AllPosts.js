@@ -21,7 +21,7 @@ const AllPosts = () => {
     const loadPosts = async () => {
         try {
             setLoading(true)
-            const res = await axios.get("http://localhost:9000/api/admin/allposts")
+            const res = await axios.get("https://movie-website-server.onrender.com/api/admin/allposts")
             setPostData(res.data)
             setLoading(false)
 
@@ -51,7 +51,7 @@ const AllPosts = () => {
         // console.log(record)
         const postId = record._id
         try {
-            const res = await axios.delete(`http://localhost:9000/api/admin/post/${postId}`)
+            const res = await axios.delete(`https://movie-website-server.onrender.com/api/admin/post/${postId}`)
             if (res.status === 200) {
                 message.success("Post Has Been Deleted !!")
                 loadPosts()
@@ -111,7 +111,7 @@ const AllPosts = () => {
         const postId = EditingPost._id
         try {
             setLoading("editpost")
-            const res = await axios.put(`http://localhost:9000/api/admin/post/${postId}`, EditingPost)
+            const res = await axios.put(`https://movie-website-server.onrender.com/api/admin/post/${postId}`, EditingPost)
             console.log(res)
             if (res.status === 200) {
                 message.success("Post Updated SucessFully")

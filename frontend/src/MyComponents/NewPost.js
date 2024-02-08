@@ -56,7 +56,7 @@ const NewPost = () => {
     }
     const handleSubmit = async()=>{
         try {
-            const res = await axios.post("http://localhost:9000/api/admin/post", PostDetails)
+            const res = await axios.post("https://movie-website-server.onrender.com/api/admin/post", PostDetails)
             console.log(res)
             if(res.status === 200){
                 message.success("Post Created Sucessfully");

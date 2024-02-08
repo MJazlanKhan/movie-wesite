@@ -14,7 +14,7 @@ const Wishlist = () => {
     const loadWishlist = async () => {
         setLoading(true)
         try {
-            const res = await axios.get(`http://localhost:9000/api/users/wishlist/${userId}`)
+            const res = await axios.get(`https://movie-website-server.onrender.com/api/users/wishlist/${userId}`)
             // console.log(res.data)
             setWishlist(res.data)
             setLoading(false)

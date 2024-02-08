@@ -12,7 +12,7 @@ const MoviesList = () => {
   const loadPosts = async () => {
     try {
       setLoading(true)
-      const res = await axios.get("http://localhost:9000/api/admin/allposts")
+      const res = await axios.get("https://movie-website-server.onrender.com/api/admin/allposts")
       const newData = res.data;
       setLoading(false)
 
